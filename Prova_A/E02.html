@@ -11,10 +11,42 @@
     */
     
     //Entrada
+    const salarioLiquido = Number(prompt("Informe o seu salário Líquido:").trim().replace(",","."));
+    const auxilioTransporte = prompt("Deseja receber auxílio transporte ou não?(S - Sim e N - Não)").trim().toUpperCase();
 
 
     //Processamento
-
+    if (salarioLiquido < 2000 && auxilioTransporte == "N") {
+        alert("não há desconto!");
+    }
+    else if (salarioLiquido >= 2000 && salarioLiquido < 3500 && auxilioTransporte == "N") {
+        const desconto10 = salarioLiquido - (salarioLiquido * 0.10);
+        alert(`ficará o valor com desconto de 10%: ${desconto10}.`);
+    }
+    else if (salarioLiquido >= 3500 && salarioLiquido < 6000 && auxilioTransporte == "N") {
+        const desconto20 = salarioLiquido - (salarioLiquido * 0.20);
+        alert(`ficará o valor com desconto de 20%: ${desconto20}.`);
+    }
+    else if (salarioLiquido >= 6000 && auxilioTransporte == "N") {
+        const desconto30 = salarioLiquido - (salarioLiquido * 0.30);
+        alert(`ficará o valor com desconto de 30%: ${desconto30}.`);
+    }
+    else if (salarioLiquido >= 2000 && salarioLiquido < 3500 && auxilioTransporte == "S") {
+        const desconto16 = salarioLiquido - (salarioLiquido * 0.16);
+        alert(`ficará o valor com desconto de 16%: ${desconto16}.`);
+    }
+    else if (salarioLiquido >= 3500 && salarioLiquido < 6000 && auxilioTransporte == "S") {
+        const desconto26 = salarioLiquido - (salarioLiquido * 0.26);
+        alert(`ficará o valor com desconto de 26%: ${desconto26}.`);
+    }
+    else if (salarioLiquido >= 6000 && auxilioTransporte == "S") {
+        const desconto36 = salarioLiquido - (salarioLiquido * 0.36);
+        alert(`ficará o valor com desconto de 36%: ${desconto36}.`);
+    }
+    else if (salarioLiquido < 2000 && auxilioTransporte == "S") {
+        const desconto6 = salarioLiquido - (salarioLiquido * 0.06);
+        alert(`ficará o valor com desconto de 6%: ${desconto6}.`);
+    }
 
     //Saída
 

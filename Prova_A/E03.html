@@ -7,10 +7,17 @@
     */
     
     //Entrada
-
+    const gastoDiario = Number(prompt(`Informe quanto que vc gasta diariamente nas refeições:`).trim().replace(",","."));
+    const diasRefeicoes = Number(prompt(`Informe quantos dias da semana vc faz as refeiçõse na universidade:`).trim().replace(",","."));
+    const gastoMes = gastoDiario * diasRefeicoes;
 
     //Processamento
-
+    if (gastoMes > 500) {
+        alert("Está gastando muito e precisa rever os seus gastos.");
+    }
+    else {
+        alert("O custo da alimentação está dentro do esperado.");
+    }
 
     //Saída
 

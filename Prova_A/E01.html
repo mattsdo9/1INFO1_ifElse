@@ -4,13 +4,61 @@
     Uma equipe, contendo 5 alunos, precisa eleger um líder. Considere que existem dois candidatos a representante: João(1) e Maria(2). Faça um programa que receba o voto de cada aluno e calcule quem foi o representante eleito.
     Apresente o resultado final, com o nome do líder escolhido e a quantidade de votos que recebeu.
     */
-    
-    //Entrada
 
+    //Entrada
+    const voto1 = Number(prompt("Vote em apenas um candidato, João(1) ou Maria(2)").trim());
+    const voto2 = Number(prompt("Vote em apenas um candidato, João(1) ou Maria(2)").trim());
+    const voto3 = Number(prompt("Vote em apenas um candidato, João(1) ou Maria(2)").trim());
+    const voto4 = Number(prompt("Vote em apenas um candidato, João(1) ou Maria(2)").trim());
+    const voto5 = Number(prompt("Vote em apenas um candidato, João(1) ou Maria(2)").trim());
 
     //Processamento
 
+    let joao = 0;
+    let maria = 0;
 
+
+    if (voto1 == 1) {
+        joao = joao + 1;
+    }
+    else {
+        maria = maria + 1;
+    }
+
+    if (voto2 == 1) {
+        joao = joao + 1;
+    }
+    else {
+        maria = maria + 1;
+    }
+
+    if (voto3 == 1) {
+        joao = joao + 1;
+    }
+    else {
+        maria = maria + 1;
+    }
+
+    if (voto4 == 1) {
+        joao = joao + 1;
+    }
+    else {
+        maria = maria + 1;
+    }
+
+    if (voto5 == 1) {
+        joao = joao + 1;
+    }
+    else {
+        maria = maria + 1;
+    }
+
+    if (joao > maria) {
+        alert(`João vai ser o Líder!`);
+    }
+    else {
+        alert(`Maria vai ser a líder!`);
+    }
     //Saída
 
 </script>

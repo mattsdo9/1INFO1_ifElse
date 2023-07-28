@@ -8,12 +8,26 @@
     Se o valor total for maior do que R$ 2.000,00, haverá cortesia (não será cobrado) duas horas de evento e duas pessoas que auxiliaram na organização do evento.
     Calcule e apresente o custo final do evento.
     */
-    
-    //Entrada
 
+    //Entrada
+    const horasEventoDurou = Number(prompt("Informe a quantidade de horas que o evento durou:").trim());
+    const pessoasAuxilio = Number(prompt("Informe a quantidade de pessoas que auxiliaram na organização do evento:").trim());
+
+    const valorTotal = (horasEventoDurou * 300) + (pessoasAuxilio * 100);
 
     //Processamento
-
+    if (valorTotal > 1500) {
+        alert(`Haverá cortesia(nao será cobrado) duas horas de evento. O custo final ficará :$${(valorTotal) - (2 * 300)}`);
+    }
+    else if (valorTotal < 1500) {
+        alert(`Será cobrado o valor normal de $${valorTotal}.`);
+    }
+    else if (valorTotal > 2500) {
+        alert(`Haverá cortesia (não será cobrado) duas horas de evento e duas pessoas que auxiliaram na organização do evento. O custo final ficará: $${(valorTotal) - (2 * 300) + (2 * 100)} `);
+    }
+    else if (valorTotal < 2500) {
+        alert(`Será cobrado o valor normal de $${valorTotal}.`)
+    }
 
     //Saída
 
